@@ -17,8 +17,9 @@
     <h1>Projects</h1>
 
     {% for project in projects %}
-        <img src="{% static 'projects/img/' %}{{ project.image }}" alt="">
+        <img src="{% static 'projects/img/' %}{{ project.image }}" alt="{{ project.title }}">
         <p>{{ project.title }}</p>
+        <p>{{ project.description }}</p>
     {% endfor %}
     
 
